@@ -1,0 +1,9 @@
+com\app\productos\infraestructure\adapters\entities\EntityProduct.class
+com\app\productos\infraestructure\adapters\ProductAdapter.class
+com\app\productos\ProductosApplication.class
+com\app\productos\infraestructure\adapters\repositories\ProductRepository.class
+com\app\productos\domain\services\ProductService.class
+com\app\productos\domain\models\Product.class
+com\app\productos\infraestructure\mappers\ProductMapper.class
+com\app\productos\domain\ports\ProductAdapterPort.class
+com\app\productos\infraestructure\mappers\ProductMapperImpl.class
