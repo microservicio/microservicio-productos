@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class EntityProduct {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
     private Double precio;
@@ -23,7 +23,9 @@ public class EntityProduct {
     @Column(name = "create_at")
     private LocalDateTime createAt;
 
-    private void addInformationDate() {
+    @PrePersist
+    private void addDate() {
         createAt = LocalDateTime.now();
     }
+
 }

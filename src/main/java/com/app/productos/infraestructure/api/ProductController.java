@@ -1,7 +1,6 @@
 package com.app.productos.infraestructure.api;
 
 import com.app.productos.domain.ports.ProductServicePort;
-import com.app.productos.domain.services.ProductService;
 import com.app.productos.infraestructure.dto.ProductDTO;
 import com.app.productos.infraestructure.mappers.ProductMapper;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("api-product")
