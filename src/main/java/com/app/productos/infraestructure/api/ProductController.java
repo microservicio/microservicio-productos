@@ -4,10 +4,7 @@ import com.app.productos.domain.ports.ProductServicePort;
 import com.app.productos.infraestructure.dto.ProductDTO;
 import com.app.productos.infraestructure.mappers.ProductMapper;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,8 +27,8 @@ public class ProductController {
         return ResponseEntity.ok(products);
     }
 
-    @GetMapping
-    public ResponseEntity<ProductDTO> findByid(@RequestParam Integer id) {
+    @GetMapping("/{id}")
+    public ResponseEntity<ProductDTO> findById(@PathVariable Integer id) {
         var product = productMapper.modelToDto(productServicePort.findById(id));
         return ResponseEntity.ok(product);
     }
