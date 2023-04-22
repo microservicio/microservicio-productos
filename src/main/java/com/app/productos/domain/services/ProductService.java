@@ -2,11 +2,12 @@ package com.app.productos.domain.services;
 
 import com.app.productos.domain.models.Product;
 import com.app.productos.domain.ports.ProductAdapterPort;
+import com.app.productos.domain.ports.ProductServicePort;
+import com.app.productos.infraestructure.ExceptionHandlers.ProductNotFoundException;
 
 import java.util.List;
-import java.util.Optional;
 
-public class ProductService {
+public class ProductService implements ProductServicePort {
 
     private final ProductAdapterPort productAdapterPort;
 
@@ -18,7 +19,8 @@ public class ProductService {
         return productAdapterPort.findAll();
     }
 
-    public Optional<Product> findById(Integer id){
-        return productAdapterPort.findById(id);
+    public Product findById(Integer id) {
+        return productAdapterPort.findById(id).orElseThrow(() ->
+                new ProductNotFoundException("Producto no encontrado"));
     }
 }
