@@ -9,11 +9,19 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
-    @Mapping(target = "id",source = "id")
-    @Mapping(target = "nombre",source = "nombre")
-    @Mapping(target = "precio",source = "precio")
-    @Mapping(target = "createAt",source = "createAt")
+    @Mapping(target = "id", source = "id")
+    @Mapping(target = "nombre", source = "nombre")
+    @Mapping(target = "precio", source = "precio")
+    @Mapping(target = "createAt", source = "createAt")
     Product entityToModel(EntityProduct entityProduct);
+
+    @InheritConfiguration
+    EntityProduct modelToEntity(Product product);
+
     @InheritConfiguration
     ProductDTO modelToDto(Product product);
+
+
+    @Mapping(target = "createAt", ignore = true)
+    Product dtoToModel(ProductDTO productDTO);
 }

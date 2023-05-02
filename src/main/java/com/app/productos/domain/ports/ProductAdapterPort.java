@@ -8,4 +8,7 @@ import java.util.Optional;
 public interface ProductAdapterPort {
     List<Product> findAll();
     Optional<Product> findById(Integer id);
+    Product save(Product product);
+
+    void deleteByid(Integer id);
 }

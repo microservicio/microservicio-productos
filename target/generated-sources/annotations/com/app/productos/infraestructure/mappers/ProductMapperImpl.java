@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-04-22T14:36:02-0500",
+    date = "2023-05-01T19:11:31-0500",
     comments = "version: 1.5.4.Final, compiler: javac, environment: Java 17.0.7 (Oracle Corporation)"
 )
 @Component
@@ -32,6 +32,22 @@ public class ProductMapperImpl implements ProductMapper {
     }
 
     @Override
+    public EntityProduct modelToEntity(Product product) {
+        if ( product == null ) {
+            return null;
+        }
+
+        EntityProduct entityProduct = new EntityProduct();
+
+        entityProduct.setId( product.getId() );
+        entityProduct.setNombre( product.getNombre() );
+        entityProduct.setPrecio( product.getPrecio() );
+        entityProduct.setCreateAt( product.getCreateAt() );
+
+        return entityProduct;
+    }
+
+    @Override
     public ProductDTO modelToDto(Product product) {
         if ( product == null ) {
             return null;
@@ -50,5 +66,20 @@ public class ProductMapperImpl implements ProductMapper {
         ProductDTO productDTO = new ProductDTO( id, nombre, precio, createAt );
 
         return productDTO;
+    }
+
+    @Override
+    public Product dtoToModel(ProductDTO productDTO) {
+        if ( productDTO == null ) {
+            return null;
+        }
+
+        Product product = new Product();
+
+        product.setId( productDTO.id() );
+        product.setNombre( productDTO.nombre() );
+        product.setPrecio( productDTO.precio() );
+
+        return product;
     }
 }
