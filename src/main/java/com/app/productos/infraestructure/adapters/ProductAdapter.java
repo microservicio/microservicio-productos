@@ -1,9 +1,9 @@
 package com.app.productos.infraestructure.adapters;
 
-import com.app.productos.domain.models.Product;
+
+import com.app.commons.entities.EntityProduct;
+import com.app.commons.models.Product;
 import com.app.productos.domain.ports.ProductAdapterPort;
-import com.app.productos.infraestructure.ExceptionHandlers.ProductNotFoundException;
-import com.app.productos.infraestructure.adapters.entities.EntityProduct;
 import com.app.productos.infraestructure.adapters.repositories.ProductRepository;
 import com.app.productos.infraestructure.mappers.ProductMapper;
 import org.mapstruct.factory.Mappers;

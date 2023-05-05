@@ -1,15 +1,15 @@
 package com.app.productos.infraestructure.mappers;
 
-import com.app.productos.domain.models.Product;
-import com.app.productos.infraestructure.adapters.entities.EntityProduct;
-import com.app.productos.infraestructure.dto.ProductDTO;
+import com.app.commons.dto.ProductDTO;
+import com.app.commons.entities.EntityProduct;
+import com.app.commons.models.Product;
 import java.time.LocalDateTime;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-05-01T19:11:31-0500",
+    date = "2023-05-04T21:56:38-0500",
     comments = "version: 1.5.4.Final, compiler: javac, environment: Java 17.0.7 (Oracle Corporation)"
 )
 @Component

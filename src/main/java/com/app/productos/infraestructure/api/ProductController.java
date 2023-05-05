@@ -1,7 +1,7 @@
 package com.app.productos.infraestructure.api;
 
+import com.app.commons.dto.ProductDTO;
 import com.app.productos.domain.ports.ProductServicePort;
-import com.app.productos.infraestructure.dto.ProductDTO;
 import com.app.productos.infraestructure.mappers.ProductMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

@@ -1,3 +1,3 @@
 
-i
-9src/main/java/com/app/productos/ProductosApplication.java,c\c\cc0d20efea82292970cb7725548d48375a58adbc
+„
+Tsrc/main/java/com/app/productos/infraestructure/adapters/entities/EntityProduct.java,f\4\f428b46082ae09ca5f0d644fd8de6b4601a3a374

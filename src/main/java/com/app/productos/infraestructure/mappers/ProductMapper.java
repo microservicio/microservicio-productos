@@ -1,8 +1,10 @@
 package com.app.productos.infraestructure.mappers;
 
-import com.app.productos.domain.models.Product;
-import com.app.productos.infraestructure.adapters.entities.EntityProduct;
-import com.app.productos.infraestructure.dto.ProductDTO;
+
+
+import com.app.commons.dto.ProductDTO;
+import com.app.commons.entities.EntityProduct;
+import com.app.commons.models.Product;
 import org.mapstruct.InheritConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

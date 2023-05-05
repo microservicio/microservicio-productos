@@ -1,6 +1,7 @@
 package com.app.productos.domain.services;
 
-import com.app.productos.domain.models.Product;
+
+import com.app.commons.models.Product;
 import com.app.productos.domain.ports.ProductAdapterPort;
 import com.app.productos.domain.ports.ProductServicePort;
 import com.app.productos.infraestructure.ExceptionHandlers.ProductNotFoundException;
